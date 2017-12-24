@@ -1,11 +1,18 @@
-# BouncingBallsJS
+# BouncingGame
 Just starting to animations and using old JS techniques to make this cool Mesmerising thing
+
+### User controlled Game of Bouncing balls
+
+1 . Used ```w , s , a , d  ``` to move the white shallow ball ,
+in ``` up ``` , ``` down ``` , ``` left ``` , ``` right ``` respectively .
+
+2 . New Time features to be added soon till then enjoy this game . 
 
 ## TO test
 
 clone the repo and open ```index.html``` or open the link given .
 
-## How it was Made 
+## How it was Made
 
 ### 1. Create a constructor function as we need multiple balls.
 

@@ -69,20 +69,22 @@ EvilCircle.prototype.checkBounds= function(){
   }
 };
 
-EvilCircle.prototype.setControls = function() {
-  var _this = this;
-  window.onkeydown = function(e) {
-    if(e.keyCode === 65) { // a
-      _this.x -= _this.xV;
-    } else if(e.keyCode === 68) { // d
-      _this.x += _this.xV;
-    } else if(e.keyCode === 87) { // w
-      _this.y -= _this.yV;
-    } else if(e.keyCode === 83) { // s
-      _this.y += _this.yV;
-    }
+  EvilCircle.prototype.setControls = function() {
+    var _this = this;
+    window.onkeydown = function(e) {
+      if(e.keyCode === 65) { // a
+        _this.x -= _this.xV;
+      } else if(e.keyCode === 68) { // d
+        _this.x += _this.xV;
+      } else if(e.keyCode === 87) { // w
+        _this.y -= _this.yV;
+      } else if(e.keyCode === 83) { // s
+        _this.y += _this.yV;
+      }
+    };
   };
-};
+
+
 
   EvilCircle.prototype.collisionDetect = function(){
     for(var j=0 ; j< balls.length ; j++){
@@ -94,12 +96,15 @@ EvilCircle.prototype.setControls = function() {
             balls[j].exists = false;
             count--;
             if(count === 0){
-
               gameOver.style.visibility = "visible";
               button.style.visibility = "visible";
+
+
               button.onclick = function(){
                 window.location.reload();
               }
+              evil.delete('x');
+
             }
             para.textContent = "Ball count : " + count;
         }
@@ -119,10 +124,8 @@ Ball.prototype.create = function(){
 
 // Now we need to update the conditons in ball
 /*
-
 This function is going to check whenever the balls hit the right,left,bottom,top
 it will reverse its direction
-
 */
 
 Ball.prototype.update = function() {
@@ -171,6 +174,7 @@ var evil = new EvilCircle(
   random(0,height),
   true
 );
+
 evil.setControls();
 
 function repeat(){
@@ -178,7 +182,7 @@ function repeat(){
   context.fillStyle = 'rgba(0,0,0,0.25)';
   context.fillRect(0, 0 ,width , height);
 
-  while(balls.length < 30){
+  while(balls.length < 1){
     var ball = new Ball(
       random(0,width),
       random(0,height),

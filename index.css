@@ -1,11 +1,6 @@
 html, body {
   margin: 0;
 }
-
-html {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  height: 100%;
-}
 p {
   position: absolute;
   margin: 0;
@@ -13,6 +8,12 @@ p {
   right: 5px;
   color: #aaa;
 }
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
 body {
   overflow: hidden;
   height: inherit;
@@ -28,4 +29,30 @@ h1 {
 
   color: transparent;
   text-shadow: 0 0 4px white;
+}
+
+h2{
+  font-size: 5rem;
+  letter-spacing: 5px;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  top:300px;
+  right: 600px;
+  color: grey;
+  visibility: hidden;
+  text-shadow: 0 0 4px white;
+}
+
+.section{
+  position: absolute;
+  top:400px;
+  font-size: 3rem;
+  left: 680px;
+  background-color: blue;
+  color: black;
+  border-color: grey;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px blue;
+  visibility: hidden;
 }

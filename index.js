@@ -4,13 +4,15 @@ var canvas = document.querySelector('canvas'); // need to select for our balls t
 var context = canvas.getContext('2d'); //getting context from canvas
 var width = canvas.width = window.innerWidth ;
 var height = canvas.height = window.innerHeight ;
-
+var gameOver =document.querySelector('h2');
+var button = document.querySelector('button');
 //creating a random function
 
 function random(min,max){
   var number = Math.floor(Math.random()*(max-min)) + min;
   return number ;
 }
+
 
 
 // Need to create a constructor function as we need multiple balls
@@ -92,7 +94,12 @@ EvilCircle.prototype.setControls = function() {
             balls[j].exists = false;
             count--;
             if(count === 0){
-              alert("Game Over");
+
+              gameOver.style.visibility = "visible";
+              button.style.visibility = "visible";
+              button.onclick = function(){
+                window.location.reload();
+              }
             }
             para.textContent = "Ball count : " + count;
         }

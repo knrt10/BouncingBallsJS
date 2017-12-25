@@ -8,7 +8,9 @@ in ``` up ``` , ``` down ``` , ``` left ``` , ``` right ``` respectively .
 
 2 . Added Restart feature in game , was quite tempting .
 
-3 . New Time features to be added soon till then enjoy this game .
+3 . New Time features  added  .
+
+4 . Enjoy and Play .
 
 ## TO test
 

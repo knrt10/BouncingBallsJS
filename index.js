@@ -204,7 +204,7 @@ function repeat(){
   context.fillStyle = 'rgba(0,0,0,0.25)';
   context.fillRect(0, 0 ,width , height);
 
-  while(balls.length < 1){
+  while(balls.length < 30){
     var ball = new Ball(
       random(0,width),
       random(0,height),

@@ -6,6 +6,9 @@ var width = canvas.width = window.innerWidth ;
 var height = canvas.height = window.innerHeight ;
 var gameOver =document.querySelector('h2');
 var button = document.querySelector('button');
+var check = null;
+var h3 = document.querySelector('h3');
+
 //creating a random function
 
 function random(min,max){
@@ -41,6 +44,19 @@ function EvilCircle(x,y,exists){
   this.radius = 10;
   this.xV = 20;
   this.yV = 20;
+}
+
+function printDuration(){
+  if (check == null) {
+                var cnt = 0;
+
+                check = setInterval(function () {
+                    cnt += 1;
+                    var a = cnt;
+                document.getElementById("time").innerHTML = 'Time : '+ cnt;
+                }, 1000);
+            }
+
 }
 
 EvilCircle.prototype = Object.create(Shape.prototype);
@@ -84,7 +100,11 @@ EvilCircle.prototype.checkBounds= function(){
     };
   };
 
+ function stopTime(){
+  clearInterval(check);
+            check = null;
 
+}
 
   EvilCircle.prototype.collisionDetect = function(){
     for(var j=0 ; j< balls.length ; j++){
@@ -98,7 +118,8 @@ EvilCircle.prototype.checkBounds= function(){
             if(count === 0){
               gameOver.style.visibility = "visible";
               button.style.visibility = "visible";
-
+              h3.style.visibility = "visible";
+              stopTime();
 
               button.onclick = function(){
                 window.location.reload();
@@ -111,6 +132,7 @@ EvilCircle.prototype.checkBounds= function(){
       }
     }
   };
+
 
 // Now we create a Ball
 
@@ -202,6 +224,7 @@ function repeat(){
     balls[i].create();
     balls[i].update();
     balls[i].colorChange();
+    printDuration();
   }
 
   }

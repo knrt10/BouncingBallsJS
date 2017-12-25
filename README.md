@@ -3,10 +3,12 @@ Just starting to animations and using old JS techniques to make this cool Mesmer
 
 ### User controlled Game of Bouncing balls
 
-1 . Used ```w , s , a , d  ``` to move the white shallow ball ,
+1 . Use ```w , s , a , d  ``` to move the white shallow ball ,
 in ``` up ``` , ``` down ``` , ``` left ``` , ``` right ``` respectively .
 
-2 . New Time features to be added soon till then enjoy this game . 
+2 . Added Restart feature in game , was quite tempting .
+
+3 . New Time features to be added soon till then enjoy this game .
 
 ## TO test
 

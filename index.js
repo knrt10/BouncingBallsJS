@@ -59,7 +59,7 @@ EvilCircle.prototype.checkBounds= function(){
     this.x -= this.radius;
   }
   if((this.x - this.radius) <= 0){
-    this.xV += this.radius;
+    this.x += this.radius;
   }
   if((this.y + this.radius) >= height){
     this.y -= this.radius;

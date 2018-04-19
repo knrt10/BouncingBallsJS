@@ -1,0 +1,27 @@
+
+  repository:
+    name: BouncingBallsJS
+    description: Just starting animations and using old JS techniques to make this cool Mesmerising thing
+    homepage: https://knrt10.github.io/BouncingBallsJS/
+    topics: github, probot
+    private: false
+    has_issues: true
+    has_projects: true
+    has_wiki: true
+    has_downloads: true
+    default_branch: master
+    allow_squash_merge: true
+    allow_merge_commit: true
+    allow_rebase_merge: true
+
+  labels:
+    - name: bug
+      color: CC0000
+    - name: feature
+      color: 336699
+    - name: first-timers-only
+      oldname: bug
+
+  collaborators:
+    - username: enter any username
+      permission: push
